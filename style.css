@@ -162,6 +162,7 @@ button {
   background-color: black;
   color: white;
   border: black solid 1px;
+  margin-bottom: 10px !important;
 }
 
 .blackColor.is-checked {

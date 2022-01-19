@@ -1,24 +1,106 @@
-<div class="button-group" data-filter-group="year">
-  <button class="button redColor is-checked" data-filter="*">ALL</button>
-  <button class="button redColor" data-filter=".2020">2020</button>
-  <button class="button redColor" data-filter=".2021">2021</button>
-  <button class="button redColor" data-filter=".2022">2022</button>
-</div>
-<div class="button-group" data-filter-group="country">
-  <button class="button greenColor is-checked" data-filter="*">ALL</button>
-  <button class="button greenColor" data-filter=".france">FRANCE</button>
-  <button class="button greenColor" data-filter=".poland">POLAND</button>
-  <button class="button greenColor" data-filter=".italy">ITALY</button>
-  <button class="button greenColor" data-filter=".netherlands">THE NETHERLANDS</button>
-</div>
-<div class="button-group" data-filter-group="material">
-  <button class="button blackColor is-checked" data-filter="*">ALL</button>
-  <button class="button blackColor" data-filter=".wood">WOOD</button>
-  <button class="button blackColor" data-filter=".glass">GLASS</button>
-  <button class="button blackColor" data-filter=".metal">METAL</button>
-  <button class="button blackColor" data-filter=".bench">BENCH</button>
-</div>
+< div class = "button-group"
+data - filter - group = "year" >
+  <
+  button class = "button redColor is-checked"
+data - filter = "*" > ALL < /button> <
+button class = "button redColor"
+data - filter = ".2020" > 2020 < /button> <
+button class = "button redColor"
+data - filter = ".2021" > 2021 < /button> <
+button class = "button redColor"
+data - filter = ".2022" > 2022 < /button> < /
+div > <
+  div class = "button-group"
+data - filter - group = "country" >
+  <
+  button class = "button greenColor is-checked"
+data - filter = "*" > ALL < /button> <
+button class = "button greenColor"
+data - filter = ".france" > FRANCE < /button> <
+button class = "button greenColor"
+data - filter = ".poland" > POLAND < /button> <
+button class = "button greenColor"
+data - filter = ".italy" > ITALY < /button> <
+button class = "button greenColor"
+data - filter = ".netherlands" > THE NETHERLANDS < /button> < /
+div > <
+  div class = "button-group"
+data - filter - group = "material" >
+  <
+  button class = "button blackColor is-checked"
+data - filter = "*" > ALL < /button> <
+button class = "button blackColor"
+data - filter = ".wood" > WOOD < /button> <
+button class = "button blackColor"
+data - filter = ".glass" > GLASS < /button> <
+button class = "button blackColor"
+data - filter = ".metal" > METAL < /button> <
+button class = "button blackColor"
+data - filter = ".bench" > BENCH < /button> < /
+div >
 
-{'<>':'div','class':'button-group','data-filter-group':'years','html':
+  {
+    '<>': 'div',
+    'class': 'button-group',
+    'data-filter-group': 'years',
+    'html':
 
   }
+
+json2html.component.add('year',
+{
+  '<>': 'div',
+  'class': 'button redColor',
+  'data-filter': '.${FIELD2}'
+  'text': '${FIELD2}'
+});
+
+let data = [[
+      {
+        "FIELD1": "class",
+        "FIELD2": 2016
+ },
+      {
+        "FIELD1": "class",
+        "FIELD2": 2017
+ },
+      {
+        "FIELD1": "class",
+        "FIELD2": 2018
+ },
+      {
+        "FIELD1": "class",
+        "FIELD2": 2019
+ },
+      {
+        "FIELD1": "class",
+        "FIELD2": 2020
+ },
+      {
+        "FIELD1": "class",
+        "FIELD2": 2021
+ },
+      {
+        "FIELD1": "class",
+        "FIELD2": 2022
+ }
+];
+
+let template = {
+      '<>': 'div',
+      'class': 'button-group',
+      'data-filter-group': 'year',
+      'html': [
+        {
+          '[]': 'year',
+          'data': function()
+          {
+            return (this.years);
+          }
+  }]
+    };
+
+$(".leftbar").json2html(
+    {
+      'years': data
+    }, template);
