@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <div class="topbar">
+      <div class="title">RREPOSITORY</div>
+      <div class="about">ABOUT</div>
+    </div>
+    <div class="aboutPage">
+      <div class="topbarpreview aboutbar">
+        <div class="titletopbarpreview">ABOUT</div>
+        <div class="cross" id="closeabout">X</div>
+      </div>
+      <div class="aboutcontent">
+        <p>RRepository is a website for contextual image browsing.</p>
+        <!--
+          to jest chyba też corny:
+          <p>encourages critical approach towards surrounding infrastructure.</p>
+          -->
+        <p>It lets you explore videos and images in an organized and flexible way.</p>
+        <p>Currently available footage gives a preview on how the system works.</p>
+        <p>In the future we see various people contributing to the database <br>
+
+          by submitting their own files through a built-in form.</p>
+        <p>We also plan to introduce different export options to make the content more accessible.</p>
+        <br>
+        <br>
+        <br>
+        <p>For any questions or inquires contact us at info@rrepository.org</p>
+      </div>
+    </div>
+    <div class="borderline"></div>
+    <div class="contentWrapper">
+      <div class="leftbar">
+        <div class="button-group" data-filter-group="year">
+          <button class="button redColor is-checked" data-filter="*">ALL</button>
+          <button class="button redColor" data-filter=".2020">2020</button>
+          <button class="button redColor" data-filter=".2021">2021</button>
+          <button class="button redColor" data-filter=".2022">2022</button>
+        </div>
+        <div class="button-group" data-filter-group="country">
+          <button class="button greenColor is-checked" data-filter="*">ALL</button>
+          <button class="button greenColor" data-filter=".france">FRANCE</button>
+          <button class="button greenColor" data-filter=".poland">POLAND</button>
+          <button class="button greenColor" data-filter=".italy">ITALY</button>
+          <button class="button greenColor" data-filter=".netherlands">THE NETHERLANDS</button>
+        </div>
+        <div class="button-group" data-filter-group="material">
+          <button class="button blackColor is-checked" data-filter="*">ALL</button>
+          <button class="button blackColor" data-filter=".wood">WOOD</button>
+          <button class="button blackColor" data-filter=".glass">GLASS</button>
+          <button class="button blackColor" data-filter=".metal">METAL</button>
+          <button class="button blackColor" data-filter=".bench">BENCH</button>
+        </div>
+
+      </div>
+      <div class="rightbarcontainer">
+        <div class="rightbar">
+          <div class="element-item 2020 france" style="background-image: url('images/image1.png');background-size: cover;"></div>
+          <div class="element-item 2020 france bench" style="background-image: url('images/image2.png');background-size: cover;"></div>
+          <div class="element-item 2020 france" style="background-image: url('images/image3.png');background-size: cover;"></div>
+          <div class="element-item 2020 france wood" style="background-image: url('images/image4.png');background-size: cover;"></div>
+          <div class="element-item 2020 france" style="background-image: url('images/image5.png');background-size: cover;"></div>
+          <div class="element-item 2020 bench" style="background-image: url('images/image6.png');background-size: cover;"></div>
+          <div class="element-item 2020" style="background-image: url('images/image7.png');background-size: cover;"></div>
+          <div class="element-item 2020 france" style="background-image: url('images/image1.png');background-size: cover;"></div>
+          <div class="element-item 2020 france bench" style="background-image: url('images/image2.png');background-size: cover;"></div>
+          <div class="element-item 2020 france" style="background-image: url('images/image3.png');background-size: cover;"></div>
+        </div>
+      </div>
+      <div class="videopreview" style="">
+        <div class="topbarpreview">
+          <div class="titletopbarpreview">VID0001</div>
+          <div class="cross" id="close">X</div>
+        </div>
+        <div class="videodiv">
+          <video class="videoo" src="videoset_001/wnat0001.mov" autoplay poster="">
+          </video>
+        </div>
+        <div class="tagbox">
+          <div class="tag redColor">2020</div>
+          <div class="tag greenColor">POLAND</div>
+          <div class="tag blackColor">BINS</div>
+          <div class="tag blackColor">DOOR</div>
+          <div class="tag blackColor">SPRAYPAINT</div>
+          <div class="tag blackColor">STREET</div>
+        </div>
+        <div class="descriptionbox">
+          <div class="">
+            Recording date: 20-08-2022
+          </div>
+          <div class="">
+            Author: Stachu420XD
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+  <script src="script.js" charset="utf-8"></script>
+</body>
+
+</html>
