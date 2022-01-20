@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>RREPOSITORY</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -101,7 +101,8 @@
           <div class="cross" id="close">X</div>
         </div>
         <div class="videodiv">
-          <video class="videoo" src="videoset_001/wnat0001.mov" autoplay poster="">
+          <video class="videoo" controls="controls" preload="none" onclick="this.play()" src="videoset_001/wnat0001.mov" autoplay playsinline style="pointer-events: none;">
+            <source type="video/mov" src="videoset_001/WNAT0001.mov">
           </video>
         </div>
         <div class="tagbox">
